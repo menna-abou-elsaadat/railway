@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  resources :tickets
+  resources :trains
+  devise_for :users
+  root :to =>"trains#index"
+
+   get 'weird_path' => "trains#test" , :as => "user_weird"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
