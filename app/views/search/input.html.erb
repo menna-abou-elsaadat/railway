@@ -1,0 +1,8 @@
+<h2>please enter train id you want to buy a ticket for</h2>
+<%= form_tag( buy_ticket_path, method: "post") do %>
+  <%= label_tag(:i, "train id") %>
+  <br>
+  <%= number_field_tag(:i) %>
+  <br>  
+  <%= submit_tag("buy a ticket") %>
+<% end %>

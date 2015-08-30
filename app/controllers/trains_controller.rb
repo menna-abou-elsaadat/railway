@@ -22,6 +22,8 @@ class TrainsController < ApplicationController
   def edit
   end
 
+ 
+
   # POST /trains
   # POST /trains.json
   def create
@@ -80,6 +82,6 @@ class TrainsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def train_params
-      params.require(:train).permit(:to, :from, :date, :number_seats, :leaving_time, :arrival_time)
+      params.require(:train).permit(:to, :from, :date, :price, :number_seats, :leaving_time, :arrival_time)
     end
 end

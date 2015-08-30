@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+<h1>trains that you can buy a ticket in </h1>
+
+
+<table>
+  <thead>
+    <tr>
+      <th>To</th>
+      <th>From</th>
+      <th>Date</th>
+      <th>Number seats</th>
+      <th>Leaving time</th>
+      <th>Arrival time</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>  	
+    <% @trains.each do |train| %>
+      <tr>
+        <td><%= train.to %></td>
+        <td><%= train.from %></td>
+        <td><%= train.date %></td>
+        <td><%= train.number_seats %></td>
+        <td><%= train.leaving_time %></td>
+        <td><%= train.arrival_time %></td>
+        <%= link_to 'buy a ticket', u_input_path  %> 
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+
+ 
+

@@ -5,6 +5,10 @@ Rails.application.routes.draw do
   root :to =>"trains#index"
 
    get 'weird_path' => "trains#test" , :as => "user_weird"
+   post 'train_search' => "search" , :as => "train_search"
+   get 'u_input' => "search#input"
+   post 'buy_ticket' => "buy"
+   get 'no_seats' => "buy#noseats"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

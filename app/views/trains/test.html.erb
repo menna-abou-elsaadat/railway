@@ -1,17 +1,12 @@
- <!DOCTYPE html>
- <html>
- <head>
-   <title></title>
- </head>
- <body>
- <form >
-  from:<br>
-   <input type="text" name="from"><br>
-   to:<br>
- <input type="text" name="to"><br>
- date:<br>
- <input type="date" name="date"><br>
-  <input type="submit" value="Submit">
-</form>
-</body>
- </html>     
+<%= form_tag( train_search_path, method: "post") do %>
+  <%= label_tag(:f, "from") %>
+  <br>
+  <%= text_field_tag(:f) %>
+  <br>
+  <%= label_tag(:t, "to") %>
+  <br>
+  <%= text_field_tag(:t) %>
+  <br>
+  
+  <%= submit_tag("Click") %>
+<% end %>

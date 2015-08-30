@@ -16,13 +16,14 @@
     <%= f.number_field :user_id %>
   </div>
   <div class="field">
+    <%= f.label :price %><br>
+    <%= f.number_field :price %>
+  </div>
+  <div class="field">
     <%= f.label :train_id %><br>
     <%= f.number_field :train_id %>
   </div>
-  <div class="field">
-    <%= f.label :price %><br>
-    <%= f.text_field :price %>
-  </div>
+  
   <div class="actions">
     <%= f.submit %>
   </div>
