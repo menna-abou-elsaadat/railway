@@ -1,12 +1,20 @@
+<div class="first">
+<div class="form">
+<p>Please type you want to travel from where to where.</p>
 <%= form_tag( train_search_path, method: "post") do %>
-  <%= label_tag(:f, "from") %>
+  <%= label_tag(:f, "From") %>
+  <br>
   <br>
   <%= text_field_tag(:f) %>
   <br>
-  <%= label_tag(:t, "to") %>
+  <br>
+  <%= label_tag(:t, "To") %>
+  <br>
   <br>
   <%= text_field_tag(:t) %>
   <br>
-  
-  <%= submit_tag("Click") %>
+  <br>
+  <%= submit_tag("Submit") %>
 <% end %>
+</div>
+</div>

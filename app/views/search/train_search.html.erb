@@ -1,10 +1,11 @@
+<div class="color">
 <p id="notice"><%= notice %></p>
-<h1>trains that you can buy a ticket in </h1>
-
+<h1>Trains that you can buy a ticket in ...</h1>
 
 <table>
   <thead>
     <tr>
+    <th>id</th>
       <th>To</th>
       <th>From</th>
       <th>Date</th>
@@ -18,19 +19,21 @@
   <tbody>  	
     <% @trains.each do |train| %>
       <tr>
+      <td><%= train.id %></td>
         <td><%= train.to %></td>
         <td><%= train.from %></td>
         <td><%= train.date %></td>
         <td><%= train.number_seats %></td>
         <td><%= train.leaving_time %></td>
         <td><%= train.arrival_time %></td>
-        <%= link_to 'buy a ticket', u_input_path  %> 
+       
       </tr>
     <% end %>
   </tbody>
 </table>
-
-
-
+<div class="link">
+<%= link_to 'Buy a ticket', u_input_path  %> 
+</div>
+</div>
  
 

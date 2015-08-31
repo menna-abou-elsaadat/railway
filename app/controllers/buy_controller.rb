@@ -4,7 +4,8 @@ before_filter :check, except: [:noseats]
 
 
 	def buy_ticket
-		
+
+		@trains= Train.where(:id => params[:i])
 		Ticket.create(:train_id => params[:i])		
 	end
 	def noseats

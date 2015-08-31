@@ -1,1 +1,39 @@
-<h2>Thank you and have a nice trip</h2>
+<div class="ticket">
+<p id="notice"><%= notice %></p>
+<h1>Here is your ticket .</h1>
+<div class="box">
+    <% @trains.each do |train| %>
+    <h1>Train Ticket .</h1>
+      <br>
+      <br>
+      Tain Id :
+      <%= train.id %>
+      <br>
+      <br>
+       From :
+        <%= train.from %>
+        <br>
+        <br>
+      To : 
+        <%= train.to %>
+       <br> 
+        <br>
+        Leaving_time :
+       
+        <%= train.leaving_time %>
+        <br>
+        <br>
+        Arrival_time :
+        <%= train.arrival_time %>
+       <br>
+       <br>
+       Price : 20$
+     
+    <% end %>
+    </div>
+
+  <p>Thank you for using our train station service .</p>
+    </div>
+
+ 
+ 
